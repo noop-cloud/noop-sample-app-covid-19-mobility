@@ -43,7 +43,7 @@ const formatData = async data => {
 const getData = () => {
   axios.defaults.headers.common['Accept-Encoding'] = 'gzip, deflate, br'
   axios
-    .get('https://covid-dashboard.noop.app/data')
+    .get('http://localapp/data')
     .then(async ({ data }) => {
       await formatData(data)
       return true
